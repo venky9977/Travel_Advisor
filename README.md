@@ -43,7 +43,6 @@ This project is perfect for people looking to **find new restaurants, book hotel
    ```bash
     npm install
 
-
 3. Create .env file:
     ```bash
     REACT_APP_GOOGLE_MAPS_API_KEY=your_google_maps_api_key
