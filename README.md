@@ -36,7 +36,7 @@ This project is perfect for people looking to **find new restaurants, book hotel
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/travel-advisor.git
+   git clone https://github.com/venky9977/Travel_Advisor.git
    cd travel-advisor
 
 2. Install Dependencies:
