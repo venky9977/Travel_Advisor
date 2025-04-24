@@ -4,7 +4,7 @@
 
 ## 🌍 Introduction
 
-**Travel Advisor** is a powerful and responsive travel companion app built with React and Google Maps. Whether you're planning a trip or exploring your local area, this app helps you discover the best **restaurants, hotels, and attractions** around you in real-time — all powered by **Geolocation**, **Google Maps**, and the **Travel Advisor API**.
+**Travel Advisor** is a powerful and responsive travel companion app built with React and Google Maps. Whether you're planning a trip or exploring your local area, this app helps you discover the best **restaurants and attractions** around you in real-time — all powered by **Geolocation**, **Google Maps**, and the **Travel Advisor API**.
 
 This project is perfect for people looking to **find new restaurants, book hotels, or explore attractions** nearby.
 
