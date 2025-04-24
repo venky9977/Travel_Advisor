@@ -9,7 +9,7 @@ import List from './components/List/List';
 import Map from './components/Map/Map';
 
 const App = () => {
-  // ✅ Load type and rating from localStorage or fallback
+  // Load type and rating from localStorage or fallback
   const [type, setType] = useState(() => localStorage.getItem('selectedType') || 'restaurants');
   const [rating, setRating] = useState(() => localStorage.getItem('selectedRating') || '');
 
@@ -23,14 +23,14 @@ const App = () => {
   const [childClicked, setChildClicked] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
 
-  // ✅ Get user location on first load
+  // Get user location on first load
   useEffect(() => {
     navigator.geolocation.getCurrentPosition(({ coords: { latitude, longitude } }) => {
       setCoords({ lat: latitude, lng: longitude });
     });
   }, []);
 
-  // ✅ Persist filters when they change
+  // Persist filters when they change
   useEffect(() => {
     localStorage.setItem('selectedType', type);
   }, [type]);
@@ -39,7 +39,7 @@ const App = () => {
     localStorage.setItem('selectedRating', rating);
   }, [rating]);
 
-  // ✅ Fetch places when bounds/type changes
+  // Fetch places when bounds/type changes
   useEffect(() => {
     if (bounds) {
       setIsLoading(true);
@@ -49,7 +49,7 @@ const App = () => {
           const validPlaces = data.filter((place) => place.name && place.num_reviews > 0);
           setPlaces(validPlaces);
 
-          // ✅ Apply rating filter if it exists
+          // Apply rating filter if it exists
           if (rating) {
             const filtered = validPlaces.filter((place) => Number(place.rating) >= rating);
             setFilteredPlaces(filtered);
@@ -62,7 +62,7 @@ const App = () => {
     }
   }, [bounds, type]);
 
-  // ✅ Re-filter places when rating changes (post-fetch)
+  // Re-filter places when rating changes (post-fetch)
   useEffect(() => {
     if (rating && places.length) {
       const filtered = places.filter((place) => Number(place.rating) >= rating);
